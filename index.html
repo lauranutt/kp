@@ -1,23 +1,22 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdn.rawgit.com/konvajs/konva/1.2.2/konva.min.js"></script>
-    <meta charset="utf-8" />
-    <title>Cordon Salon Demo</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #f0f0f0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container"></div>
-    <script>
-      var width = window.innerWidth;
+    <head>
+        <meta charset="8"/>
+        <title>Test for Cordon Salon</title>
+    </head>
+
+    <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
+</head>
+
+
+
+    <body>
+        <div id="container"></div>
+        <canvas id="myCanvas" width=  "window.innerWidth" height="window.innerHeight" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var width = window.innerWidth;
       var height = window.innerHeight;
 
       function update(activeAnchor) {
@@ -121,7 +120,7 @@
         height: 137,
       });
 
-      // Kara
+      // kara
       var karaImg = new Konva.Image({
         width: 93,
         height: 104,
@@ -156,14 +155,21 @@
         helloImg.image(imageObj1);
         layer.draw();
       };
-      imageObj1.src = 'kp/Hello-logo-1.png';
+      imageObj1.src = '/assets/hello.jpg';
 
       var imageObj2 = new Image();
       imageObj2.onload = function () {
-        yodaImg.image(imageObj2);
+        karaImg.image(imageObj2);
         layer.draw();
       };
-      imageObj2.src = 'kp/318792.jpg';
-    </script>
-  </body>
+      imageObj2.src = '/assets/kara.jpg';
+
+
+
+
+
+
+
+        </script>
+    </body>
 </html>
